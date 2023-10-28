@@ -25,7 +25,7 @@ export const Heading = () => {
             </div>
          )}
          {isAuthenticated && !isLoading && (
-            <Button asChild>
+            <Button variant="gradient" asChild>
                <Link href="documents">
                   Enter Jotion
                   <ArrowRightIcon className="h-4 w-4 ml-2"/>
