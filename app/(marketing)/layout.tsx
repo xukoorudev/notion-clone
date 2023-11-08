@@ -9,7 +9,7 @@ const MarketingLayout = ({
       <div className="h-full">
          <Navbar />
          <main className="h-full pt-40">
-         {children}
+            {children}
          </main>
       </div>
     );

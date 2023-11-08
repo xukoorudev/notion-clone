@@ -9,6 +9,7 @@ import { Id } from "@/convex/_generated/dataModel"
 import { Title } from "./title"
 import { Banner } from "./banner"
 import { NavbarMenu } from "./navbar-menu"
+import { Publish } from "./publish"
 
 interface NavbarProps {
    isCollapsed: boolean
@@ -23,8 +24,8 @@ export const Navbar = ({
 
    const  params = useParams()
 
-   const document = useQuery(api.documents.getById, {
-      documentId: params.documentId as Id<"documents">,
+   const document  = useQuery(api.documents.getById, {
+      documentId: params.documentId as Id<"documents">
    })
 
    if (document === undefined) {
@@ -55,7 +56,8 @@ export const Navbar = ({
             <div className="flex items-center justify-between w-full">
                <Title initialData={document}/>
                <div className="flex items-center gap-x-2">
-               <NavbarMenu documentId={document._id}/>
+                  <Publish initialData={document}/>
+                  <NavbarMenu documentId={document._id}/>
                </div>
             </div>
          </nav>

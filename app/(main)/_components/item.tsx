@@ -50,6 +50,7 @@ export const Item = ({
       event.stopPropagation()
       if (!id) return
       const promies = archive({id})
+         .then(() => router.push('/documents'))
 
       toast.promise(promies, {
          loading: "Moving to trash...",
@@ -75,7 +76,7 @@ export const Item = ({
          if (!expanded) {
             onExpand?.()
          }
-         // router.push(`/documents/${documentId}`)
+         router.push(`/documents/${documentId}`)
       })
       toast.promise(promies, {
          loading: "Creating a new note...",
@@ -115,7 +116,7 @@ export const Item = ({
                {documentIcon}
             </div>
          ): (
-            <Icon className="shrink-0 h-[18px] mr-2 text-muted-foreground"/>
+            <Icon className="shrink-0 h-[18px] w-[18px] mr-2 text-muted-foreground"/>
          )}        
          <span className="truncate">
             {label}
