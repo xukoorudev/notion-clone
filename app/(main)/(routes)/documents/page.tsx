@@ -28,12 +28,14 @@ const DocumentsPage = () => {
 
    return ( 
       <div className="h-full flex flex-col items-center justify-center space-y-5">
-         <Image 
-            src="/empty.svg"
-            height="500"
-            width="500"
-            alt="Empty"
-         />
+         <div className="p-10 md:p-6">
+            <Image
+               src="/empty.svg"
+               height="400"
+               width="400"
+               alt="Empty"
+            />
+         </div>
          <h2 className="text-lg font-medium">
             Welcome to <span className="underline capitalize font-bold">{user?.username}&apos;s</span> Jotion
          </h2>
