@@ -11,6 +11,7 @@ import { Toolbar } from "@/components/toolbar"
 import { Cover } from "@/components/cover"
 import { Skeleton } from "@/components/ui/skeleton"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { Footer } from "@/components/footer"
 
 
 
@@ -87,7 +88,8 @@ const DocumentIdPage = ({
                   onChange={onChange}
                   initialContent={document.content}
                />
-            </div>       
+            </div> 
+            <Footer />      
          </ScrollArea>
     </div>
   
