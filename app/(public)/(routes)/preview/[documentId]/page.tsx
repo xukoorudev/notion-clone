@@ -11,6 +11,7 @@ import { Toolbar } from "@/components/toolbar"
 import { Cover } from "@/components/cover"
 import { Skeleton } from "@/components/ui/skeleton"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { Footer } from "@/app/(marketing)/_components/footer"
 
 
 
@@ -79,13 +80,14 @@ const DocumentIdPage = ({
       <div className="pb-40">
          <ScrollArea className="h-screen w-full">
             <Cover url={document.coverImage}/>
-            <div className="md:max-w-3xl lg:max-w-4xl mx-auto">
+            <div className="md:max-w-3xl lg:max-w-4xl mx-auto mb-20">
                <Toolbar initialData={document} />
                <Editor
                   onChange={onChange}
                   initialContent={document.content}
                />
             </div>       
+            <Footer />
          </ScrollArea>
       </div>
     );
